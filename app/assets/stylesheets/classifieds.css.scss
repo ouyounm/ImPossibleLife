@@ -1,0 +1,78 @@
+// Place all the styles related to the classifieds controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$header-font: 'Michroma', sans-serif;
+$link_color: gray;
+
+
+.classifieds_container {
+  width: 960px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  // border: solid 2px black;
+}
+
+.listing_nav_link {
+  color: $link_color;
+    &:hover {
+      color: #000;
+   }
+}
+
+.single_listing {
+  width: 80%;
+  margin: 0 auto;
+  // border: solid 2px red;
+}
+
+.listing_title {
+  font-size: 20px;
+  padding-top: 40px;
+  font-family: $header-font;
+  color: $link_color;
+    &:hover {
+      color: #000;
+    }
+}
+
+.listing_date {
+  font-family: $header-font;
+  font-size: 10px;
+  margin-top: 5px;
+  margin-left: 30px;
+}
+
+.listing_main_pic {
+  display: inline;
+  padding: 50px 50px 50px 50px;
+  border: 2px solid black;
+  float: left;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.listing_summary_point {
+  border: solid 2px red;
+  display: inline-block;
+  list-style-type: circle;
+}
+
+.listing_description {
+  margin-left: 200px;
+  margin-bottom: -52px;
+}
+
+.listing_separator {
+  margin: 0 auto;
+  width: 800px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  opacity: 0.5;
+}
+
+.clearfix {
+  clear: both;
+}

@@ -1,0 +1,20 @@
+<%= link_to 'Add a New Blog', new_blog_path %>
+
+
+<h1>My Blogs</h1>
+
+<table>
+  <thead>
+  </thead>
+
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= link_to blog.title, blog_entries_path(blog) %></td>
+        <td><%= image_tag blog.background_image.url %></td>
+        <td><%= link_to 'Edit Blog', edit_blog_path(blog) %></td>
+        <td><%= link_to 'Delete Blog', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

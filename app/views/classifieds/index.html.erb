@@ -1,0 +1,32 @@
+<!-- <h1>Listing classifieds</h1> -->
+
+<div class="classifieds_container">
+      <div class="logo"><%= image_tag "IMP_logo_small.png", class: "small_logo_home"  %></div>
+      <div>
+        <ul class="nav">
+        <li class="link first"><%= link_to 'Home', {controller: "home"}, class: "listing_nav_link" %></li>
+        <li class="link"><%= link_to 'Videos', {controller: "videos"}, class: "listing_nav_link" %></li>
+        <li class="link"><%= link_to 'Classifieds', {controller: "classifieds"}, class: "listing_nav_link" %></li>
+        <li class="link"><%= link_to 'My Blog', {controller: "blogs"}, class: "listing_nav_link" %></li>
+      </ul >
+    </div>
+    <hr class ="divder_line">
+  <%= link_to 'New Classified', new_classified_path %>
+
+    <div class="single_listing">
+      <% @classifieds.each do |classified| %>
+
+            <div class="listing_title"><%= link_to classified.title, classified_url(classified.id), class: "listing_title"  %></div>
+            <div class="listing_date"><%= classified.date_posted %></div>
+            <ul>
+            <li><div class="listing_summary_point"><%= classified.summary_point_1 %></div></li>
+            <li><div class="listing_summary_point"><%= classified.summary_point_2 %></div></li>
+            <li><div class="listing_summary_point"><%= classified.summary_point_3 %></div></li>
+            </ul>
+            <div class="listing_main_pic"><%= classified.picture %></div>
+            <hr class="listing_separator">
+        <% end %>
+        <br class="clearfix">
+      </div>
+</div>
+

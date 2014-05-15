@@ -1,0 +1,12 @@
+<div class="add_new_video_container">
+  <h1 class="new_video_header">Uploading a new video</h1>
+  <span class="form_logo"><%= image_tag "form_logo_bw.png" %></span>
+
+  <br>
+<div class="video_form">
+  <%= render 'form' %>
+</div>
+
+  <div class="videos_back_button"><%= image_tag "white_back_button.png", class: "back_button_arrow" %><%= link_to 'Back to videos', videos_path, class: "videos_back_button_text" %>
+  </div>
+</div>

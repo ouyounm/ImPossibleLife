@@ -1,0 +1,20 @@
+<h1>Listing entries</h1>
+
+<%= link_to 'New Entry', new_blog_entry_path %>
+
+<br />
+
+    <% @entries.each do |entry| %>
+
+    <div><%= link_to 'Edit Blog Post', edit_blog_entry_path(params[:blog_id], entry) %>
+       <%= link_to 'Delete Blog Post', blog_entry_path(params[:blog_id], entry), method: :delete, data: { confirm: 'Are you sure?' } %></div>
+
+       <h1><%= entry.title %></h1>
+       <h3><%= entry.sub_title %></h3>
+       <p><%= entry.text %></p>
+       <div><%= entry.pictures %></div>
+       <div><%= entry.videos %></div>
+    <% end %>
+<br>
+
+

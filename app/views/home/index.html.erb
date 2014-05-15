@@ -1,0 +1,11 @@
+<div class="home_container">
+  <div class="logo"><%= image_tag "IMP_logo_small.png", class: "small_logo_home"  %>
+</div>
+  <ul class="home_nav">
+    <li class="link first"><%= link_to 'Home', {controller: "home"}, class: "home_nav_link" %></li>
+    <li class="link"><%= link_to 'Videos', {controller: "videos"}, class: "home_nav_link" %></li>
+    <li class="link"><%= link_to 'Classifieds', {controller: "classifieds"}, class: "home_nav_link" %></li>
+    <li class="link"><%= link_to 'My Blog', {controller: "blogs"}, class: "home_nav_link" %></li>
+  </ul >
+  <hr class="divider_line">
+</div>

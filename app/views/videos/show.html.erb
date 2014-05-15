@@ -1,0 +1,21 @@
+<div class="single_video_container">
+<p id="notice"><%= notice %></p>
+<div class="video_show_group">
+
+<p>
+  <% if @video.url %>
+    <div class="video_show_page"><iframe width="720" height="404" src='<%= "http://www.youtube.com/embed/#{@video.video_code}" %>' frameborder="0" allowfullscreen></iframe></div>
+  <% else %>
+    <div class="video_show_page"><%= video_tag @video.clip(:large), controls: true %></div>
+  <% end %>
+</p>
+
+<p class="video_title_show">
+  <%= @video.title %>
+</p>
+
+<p class="video_description">
+  <%= @video.description %>
+</p>
+</div>
+</div>

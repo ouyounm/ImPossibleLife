@@ -1,0 +1,394 @@
+// Place all the styles related to the videos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$header-font: 'Michroma', sans-serif;
+$video-page-yellow: #bcb729;
+$impossible_yellow: #ffcc00;
+$impossible_green: #048204;
+$link_color: gray;
+
+//general
+
+* {
+  text-decoration: none;
+}
+
+//impossible life logo
+
+.small_logo {
+  float: right;
+  margin-top: -70px;
+  margin-right: -30px;
+  opacity: 0.3;
+}
+
+#notice {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+  background-color: rgba(215,215,0,0.2);
+  font-family: $header-font;
+  visibility: hidden;
+}
+
+//videos index
+
+hr {
+  width: 650px;
+  // width: 1000px;
+  height: 2px;
+  border: 0;
+     background-image: -webkit-linear-gradient(left, rgba(215,215,215,0), rgba(215,215,215,0.75), rgba(215,215,215,0));
+     background-image:    -moz-linear-gradient(left, rgba(215,215,215,0), rgba(215,215,215,0.75), rgba(215,215,215,0));
+     background-image:     -ms-linear-gradient(left, rgba(215,215,215,0), rgba(215,215,215,0.75), rgba(215,215,215,0));
+     background-image:      -o-linear-gradient(left, rgba(215,215,215,0), rgba(215,215,215,0.75), rgba(215,215,215,0));
+     margin-left: 200px;
+}
+
+.nav {
+  font-size: 22px;
+  font-family: "Michroma", sans-serif;
+  // border: 2px solid red;
+  display: inline-block;
+  margin-left: 200px;
+  margin-top: -30px;
+  float: left;
+}
+
+.video_nav_link {
+  color: $impossible_green;
+  &:hover {
+    color: #000;
+  }
+}
+
+.videos_container {
+  width: 960px;
+  margin: 0 auto;
+  // border: 2px solid black;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.video_index_title {
+  margin-top: 50px;
+  margin-right: 20px;
+  margin-bottom: -70px;
+  color: $impossible_green;
+}
+
+.add_video_link {
+  font-family: $header-font;
+  display: inline;
+  padding: 7px 15px 7px 15px;
+  margin-top: 30px;
+  margin-left: 30px;
+  background-color: #dfce0f;
+  visibility: hidden;
+  a {
+    color: #fff;
+  }
+  &:hover {
+    background-color: #e9e054;
+  }
+}
+
+.categories {
+  font-family: $header-font;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 60px;
+  color: #666666;
+  visibility: hidden;
+}
+
+.video_main_page {
+  max-width: 200px;
+  max-height: 100px;
+}
+
+.single_video_title {
+  font-family: $header-font;
+  color: $link_color;
+  width: 300px;
+  display: inline-block;
+  padding-bottom: 15px;
+    &:hover {
+      color: #000;
+    }
+}
+
+.single_video_clip {
+  padding-top: 10px;
+}
+
+.video_each {
+  float: left;
+  width: 300px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+//video form
+
+.add_new_video_container {
+  width: 960px;
+  height: 740px;
+  background-color: rgba(0,0,0,0.8);
+  // border-radius: 30px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  margin: 0 auto;
+}
+
+.form_logo {
+  display: inline;
+  float: right;
+  opacity: 0.2;
+  padding-right: 30px;
+  margin-top: -50px;
+}
+
+.new_video_header {
+  font-family: $header-font;
+  margin-top: 30px;
+  color: #FFFFFF;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+.video_form {
+  height: 570px;
+  margin-top: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding-bottom: 50px;
+  // background-color: rgba(122,234,0,1);
+  background-color: #d7d7d7;
+  // opacity: 0.7;
+  // border-radius: 30px;
+  outline: none;
+
+}
+
+.video_form_field {
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+
+.file_upload_field {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.file_upload_field input.file_upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.upload_label {
+  background: rgb(174,188,191); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(174,188,191,1) 0%, rgba(110,119,116,1) 50%, rgba(10,14,10,1) 51%, rgba(10,8,9,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(174,188,191,1)), color-stop(50%,rgba(110,119,116,1)), color-stop(51%,rgba(10,14,10,1)), color-stop(100%,rgba(10,8,9,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(174,188,191,1) 0%,rgba(110,119,116,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(174,188,191,1) 0%,rgba(110,119,116,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(174,188,191,1) 0%,rgba(110,119,116,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(174,188,191,1) 0%,rgba(110,119,116,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aebcbf', endColorstr='#0a0809',GradientType=0 ); /* IE6-9 */
+  font-size: 26px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 40px;
+  border-radius: 15px;
+  color: yellow;
+  border: solid 3px black;
+    &:hover {
+      border: solid 3px white;
+      color: white;
+    }
+}
+
+.clip_label {
+  font-family: $header-font;
+  font-size: 36px;
+  color: #000000
+}
+
+.back_button_arrow {
+  background-image: url("white_back_button.png");
+}
+
+.videos_back_button {
+  display: inline-block;
+  color: white;
+  font-family: $header-font;
+    &:hover {
+      background-image: transparent;
+      .back_button_arrow {
+      background-image: url("yellow_back_button.png");
+    }
+    .videos_back_button_text {
+      color: yellow;
+    }
+  }
+}
+
+.videos_back_button_text {
+  color: #FFFFFF;
+  font-size: 26px;
+  margin-left: 10px;
+  float: left;
+  margin-top: 25px;
+}
+
+h1, label {
+  font-family: $header-font;
+  color: #000000;
+  font-size: 36px;
+}
+
+label .field {
+  font-size: 80px;
+}
+
+.clip_label, label {
+  padding-left: 30px;
+}
+
+input#video_title, #video_url, textarea {
+  font-size: 20px;
+  height: 35px;
+  width: 700px;
+  // border-radius: 15px;
+  outline: none;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+textarea {
+  font-size: 20px;
+  height: 100px;
+  width: 780px;
+}
+
+::-webkit-input-placeholder {
+   font-family: $header-font;
+   font-size: 20px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-family: $header-font;
+   font-size: 20px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   font-family: $header-font;
+   font-size: 20px;
+}
+
+:-ms-input-placeholder {
+   font-family: $header-font;
+   font-size: 20px;
+}
+.submit_video_button {
+  float: right;
+  width: 300px;
+  margin-right: 40px;
+  margin-left: 80px;
+  margin-top: 20px;
+  background: rgb(174,188,191); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(174,188,191,1) 0%, rgba(110,119,116,1) 50%, rgba(10,14,10,1) 51%, rgba(10,8,9,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(174,188,191,1)), color-stop(50%,rgba(110,119,116,1)), color-stop(51%,rgba(10,14,10,1)), color-stop(100%,rgba(10,8,9,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(174,188,191,1) 0%,rgba(110,119,116,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(174,188,191,1) 0%,rgba(110,119,116,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(174,188,191,1) 0%,rgba(110,119,116,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(174,188,191,1) 0%,rgba(110,119,116,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aebcbf', endColorstr='#0a0809',GradientType=0 ); /* IE6-9 */
+  font-size: 26px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  color: white;
+  border: solid 3px black;
+  opacity: 1;
+    &:hover {
+      border: solid 3px white;
+      color: yellow;
+    }
+}
+
+.back_button_arrow {
+  margin-left: 30px;
+  margin-top: 10px;
+  float: left;
+}
+
+// videos show page
+
+.single_video_container {
+  width: 960px;
+  height: 768px;
+  // border: solid 2px black;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.video_show_group {
+  clear: both;
+}
+
+.video_show_page {
+  height: 404px;
+  width: 720px;
+  // border: 2px solid black;
+  padding: 20px 20px 20px 20px;
+  border-radius: 15px;
+  background-color: rgba(0,0,0,0.1);
+  margin: 0 auto;
+}
+
+.video_title_show {
+  width: 720px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+  margin-bottom: 10px;
+  font-family: $header-font;
+  font-size: 30px;
+  color: $video-page-yellow;
+  text-align: justify;
+  // border: 2px solid black;
+}
+
+
+.video_description {
+  width: 720px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  line-height: 1.2;
+  font-family: 'Helvetica';
+  text-align: justify;
+}

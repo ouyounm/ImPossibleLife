@@ -1,0 +1,30 @@
+<div class="videos_container clearfix">
+  <div class="logo"><%= image_tag "IMP_logo_small.png", class: "small_logo_home"  %></div>
+  <div>
+    <ul class="nav">
+    <li class="link first"><%= link_to 'Home', {controller: "home"}, class: "home_nav_link" %></li>
+    <li class="link"><%= link_to 'Videos', {controller: "videos"}, class: "home_nav_link" %></li>
+    <li class="link"><%= link_to 'Classifieds', {controller: "classifieds"}, class: "home_nav_link" %></li>
+    <li class="link"><%= link_to 'My Blog', {controller: "blogs"}, class: "home_nav_link" %></li>
+  </ul >
+</div>
+<hr class ="divder_line">
+  <h1 class="video_index_title">Videos</h1>
+
+
+    <br>
+  <div class="add_video_link"><%= link_to 'Upload a new video', new_video_path %></div>
+  <h3 class="categories">Sort by category</h3>
+
+      <ul>
+        <% @videos.each do |video| %>
+                <li class="video_each">
+                  <span class="single_video_clip"><%= video_tag video.clip(:thumb) %></span>
+                  <span class="single_video_title"><%= link_to video.title, video_url(video.id), class: "single_video_title" %></span><br>
+                </li>
+            <% end %>
+          </ul>
+
+  <br class="clearfix">
+
+</div>
